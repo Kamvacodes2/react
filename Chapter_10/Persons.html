@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>List of Persons</title>
+    <script src="https://unpkg.com/redux@4.0.1/dist/redux.js"></script>">
+</head>
+
+<body>
+    <script>
+        function addPerson(id, name,age) {
+            return {
+                type: 'ADD',
+                personData: {
+                    id: id,
+                    name: name,
+                    age: age
+                }
+            }
+        }
+
+        function removePerson(id) {
+            return {
+                type: 'REMOVE',
+                personId: id
+            }
+        }
+
+        const initialState = {
+            persons: []
+        };
+
+        function reducer(state, action) {
+            if (state === undefined) {
+                state = initialState;
+            }
+
+            if (action.type === "ADD") {
+                const newPerson = {
+                    id: action.personData.id,
+                    name: action.personData.name
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
